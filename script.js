@@ -3,7 +3,7 @@
  */
 const debugEl = document.getElementById('debug'),
 // Mapping of indexes to icons: start from banana in middle of initial position and then upwards
-iconMap = ["Банан", "Авось", "Дима", "Слива", "Пельсинка", "Созвон", "Ты фронтендер, Гарри", "Лям", "Арбуз"],
+iconMap = ["Банан", "Авось!!!!!!!!!", "Дима", "Слива", "Пельсинка", "Созвон", "Ты фронтендер, Гарри", "Лям", "Арбуз"],
 // Width of the icons
 icon_width = 79,
 // Height of one icon in the strip
@@ -97,6 +97,10 @@ function rollAll() {
    // setTimeout(rollAll, 3000);
   });
 };
+
+document.querySelector("#spinBtn").addEventListener("click",()=>{
+  rollAll();
+})
 
 // Kickoff
 setTimeout(rollAll, 1000);
