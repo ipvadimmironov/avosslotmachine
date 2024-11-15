@@ -20,7 +20,7 @@ function WeightedRandom()
 {
     var num = Math.random() * 100;
 
-    if(num > 50) lastRandom = Math.random();
+    if(num > 70) lastRandom = Math.random();
     
     
     return lastRandom
