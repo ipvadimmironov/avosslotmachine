@@ -72,7 +72,7 @@ const roll = (reel, offset = 0) => {
 let alreadyRolling=false;
 function rollAll() {
   if (alreadyRolling) {
-    debugEl.textContent = "подожди, ну"
+   // debugEl.textContent = "подожди, ну"
     return
   };
   alreadyRolling=true;
