@@ -101,6 +101,11 @@ function rollAll() {
 document.querySelector("#spinBtn").addEventListener("click",()=>{
   rollAll();
 })
+document.querySelector("#spinBtn").addEventListener("touchstart",()=>{
+  rollAll();
+})
+
+
 
 // Kickoff
 setTimeout(rollAll, 1000);
