@@ -69,8 +69,13 @@ const roll = (reel, offset = 0) => {
 /**
  * Roll all reels, when promise resolves roll again
  */
+let alreadyRolling=false;
 function rollAll() {
-
+  if (alreadyRolling) {
+    debugEl.textContent = "подожди, ну"
+    return
+  };
+  alreadyRolling=true;
   debugEl.textContent = 'авось повезёт';
 
   const reelsList = document.querySelectorAll('.slots > .reel');
@@ -93,6 +98,7 @@ function rollAll() {
       setTimeout(() => document.querySelector(".slots").classList.remove(winCls), 2000);
     }
 
+    alreadyRolling=false;
     // Again!
    // setTimeout(rollAll, 3000);
   });
