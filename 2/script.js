@@ -18,10 +18,11 @@ indexes = [0, 0, 0];
 let lastRandom = Math.random();
 function WeightedRandom()
 {
-    var num = Math.random() * 100;
+   // var num = Math.random() * 100;
 
-    if(num > 70)  lastRandom = Math.random();
+    //if(num > 70)  lastRandom = Math.random();
     
+    lastRandom = 0.5
     
     return lastRandom
 
@@ -32,7 +33,7 @@ function WeightedRandom()
  */
 const roll = (reel, offset = 0, deltaL) => {
   // Minimum of 2 + the reel offset rounds
-  const delta = (offset + 2) * num_icons + Math.round(WeightedRandom() * num_icons) - deltaL;
+  const delta = (offset + 2) * num_icons + Math.round(WeightedRandom() * num_icons) - deltaL + 4;
 
   // Return promise so we can wait for all reels to finish
   return new Promise((resolve, reject) => {
